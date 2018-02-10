@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+jp.gr.java_conf.pekokun.springbootdemo.externalapi.AutoConfiguration
