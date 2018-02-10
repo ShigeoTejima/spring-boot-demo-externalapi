@@ -4,7 +4,6 @@ import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.stereotype.Component;
@@ -43,8 +42,10 @@ public class ApiRequestMappingHandlerMapping extends RequestMappingHandlerMappin
             new RequestMappingInfo(
                 new PatternsRequestCondition(patterns.toArray(new String[patterns.size()])),
                 mapping.getMethodsCondition(),
-                mapping.getParamsCondition(), mapping.getHeadersCondition(),
-                mapping.getConsumesCondition(), mapping.getProducesCondition(),
+                mapping.getParamsCondition(),
+                mapping.getHeadersCondition(),
+                mapping.getConsumesCondition(),
+                mapping.getProducesCondition(),
                 mapping.getCustomCondition()));
 
     }
